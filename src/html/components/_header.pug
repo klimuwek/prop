@@ -1,0 +1,22 @@
+header
+	.container
+		.row
+			a.logo(href="/")
+				img(src="../images/logo.png")
+				| круглосуточный контроль за действием пропуска
+			ul.nav.nav-pills.pull-right
+				li(role="presentation"): a(href="/")
+					i(aria-hidden="true").fa.fa-home
+					| Главная
+				li(role="presentation").active: a(href="#")
+					i(aria-hidden="true").fa.fa-user
+					| Кабинет
+				li(role="presentation"): a(href="#")
+					i(aria-hidden="true").fa.fa-info
+					| О сервисе
+		.row
+			h1 Личный кабинет
+			ol.breadcrumb
+				li: a(href="#") Личный кабинет
+				li: a(href="#") Номер
+				li.active Добавление

@@ -1,0 +1,19 @@
+extends _layout.pug
+
+block title
+	title Главная
+
+block metaInfo
+	-pageMeta = {"keywords": "lot of keywords", "description": "full description"}
+	+pageMetaMxn
+
+block content
+	.container
+		.row
+			.col-lg-7.col-md-6.col-sm-12.col-xs-12
+				h1 Проверка пропуска на МКАД, СК, ТТК по гос. номеру машины 
+				p Сервис позволяет проверить пропуск на МКАД, ТТК, СК , по гос номеру машины, теперь вам не нужно беспокоиться за ваши пропуска, просто введите номер автомобиля и мы будем постоянно следить за действием вашего пропуска
+				form
+					input(type="text" class="form-control" placeholder="Например: А123АА777" id="rew" name="rew" data-mask="A000AA000")
+					button(type="submit" class="btn btn-lg btn-danger") Проверить пропуск
+					p.small Подсказка: введите номер автомобиля, без пробелов и нажмите проверить

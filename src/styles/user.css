@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import 'helpers/_variables.css';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic';
+
+/********* базовый набор *********/
+
+* { box-sizing: border-box; }
+
+body { width: 100%; height: 100vh; overflow-x: hidden; overflow-y: scroll; font-family: 'Open Sans', sans-serif; color: $white; font-size: 14px; text-shadow: none; background: url('../images/bg.jpg') no-repeat center top fixed; background-size: cover; }
+
+ul li { list-style: none; }
+a { text-decoration: underline; color: $white;
+	&:hover { text-decoration: none; color: $white; }
+}
+
+input { outline: none; box-shadow: none; height: 60px; padding: 10px; line-height: 40px; }
+input[type="text"] { color: $gray; }
+input[type="search"] { color: $gray; }
+input[type="submit"] { opacity: 0.9; }
+input[type="submit"]:hover { opacity: 1; }
+input[type="submit"]:active { opacity: 0.8; }
+input:focus, 
+select:focus, 
+textarea:focus { outline: none; }
+
+
+header {
+	.breadcrumb { background: transparent; }
+}
+
+
+
+@media (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (min-width: 1200px) {}

@@ -1,0 +1,17 @@
+extends _layout.pug
+
+block title
+	title Личный кабинет
+
+block metaInfo
+	-pageMeta = {"keywords": "", "description": ""}
+	+pageMetaMxn
+
+block content
+	.container
+		.row
+			form
+				.form-group
+					label(for="")
+					input(name="" placeholder="").form-control
+				button(type="submit").btn.btn-default

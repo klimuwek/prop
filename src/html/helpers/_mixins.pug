@@ -1,0 +1,4 @@
+//- meta tags in page <head>
+mixin pageMetaMxn
+	each val, index in pageMeta
+		meta(name=index, content=val)
