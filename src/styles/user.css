@@ -6,14 +6,21 @@
 
 * { box-sizing: border-box; }
 
-body { width: 100%; height: 100vh; overflow-x: hidden; overflow-y: scroll; font-family: 'Open Sans', sans-serif; color: $white; font-size: 14px; text-shadow: none; background: url('../images/bg.jpg') no-repeat center top fixed; background-size: cover; }
+html { height: 100%; }
+body { width: 100%; min-height: 100%; position: relative; padding-bottom: 140px; overflow-x: hidden; overflow-y: scroll; font-family: 'Open Sans', sans-serif; color: $white; font-size: 14px; text-shadow: none; background: url('../images/bg.jpg') no-repeat center top fixed; background-size: cover;
+}
 
 ul li { list-style: none; }
 a { text-decoration: underline; color: $white;
 	&:hover { text-decoration: none; color: $white; }
 }
 
-input { outline: none; box-shadow: none; height: 60px; padding: 10px; line-height: 40px; }
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="submit"],
+button, select,
+.form-control { outline: none; box-shadow: none; transition: none; height: 60px; font-size: 18px; border-radius: 6px; }
 input[type="text"] { color: $gray; }
 input[type="search"] { color: $gray; }
 input[type="submit"] { opacity: 0.9; }
@@ -22,10 +29,51 @@ input[type="submit"]:active { opacity: 0.8; }
 input:focus, 
 select:focus, 
 textarea:focus { outline: none; }
+.btn-transp { background-color: rgba(0,0,0,0.8); border: 1px solid $white; opacity: 0.9; font-size: 18px; border-radius: 6px;
+    &:hover, &:active { color: $white; opacity: 1; }
+    &:focus { color: $white; opacity: 1; outline: 0; }
+}
+.divider { display: inline-block; padding: 0 4px; }
 
-
-header {
+header { padding: 20px 0;
+    .logo { z-index: 100;
+        .small { margin: -12px 70px 0 70px; }
+    }
+    .nav { padding-top: 4px;
+        li {
+            a { text-decoration: none; height: 60px; line-height: 40px;
+                i { margin-right: 5px; color: $blue; font-size: 18px; }
+            }
+            &:hover a { background-color: $blue;
+                i { color: $white; }
+            }
+            &.active a i { color: $white; }
+        }
+    }
+    .heading { margin-top: 30px; }
 	.breadcrumb { background: transparent; }
+}
+
+.table { margin: 0;
+    & > thead > tr > td { vertical-align: middle; }
+    & > tbody > tr > td { vertical-align: middle; }
+    td {  height: 60px; }
+}
+
+.numberTable { border-top: 1px solid $white; margin: 20px 0;
+    .paginator { color: $gray; line-height: 60px; border-bottom: 1px solid $white; overflow: hidden; }
+    .summary { padding-top: 15px; padding-bottom: 15px; overflow: hidden;
+        .left { width: 200px; display: inline-block; }
+    }
+}
+
+footer { position: absolute;  left: 0; bottom: 0; right: 0; height: 140px; padding-top: 60px;
+    .copy { margin-top: 10px; }
+    .socials {
+        a { margin-left: 4px; 
+            img { width: 142px; display: inline-block; border: 1px solid $white; border-radius: 6px; }
+        }
+    }
 }
 
 

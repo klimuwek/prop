@@ -1,22 +1,26 @@
 header
 	.container
 		.row
-			a.logo(href="/")
-				img(src="../images/logo.png")
-				| круглосуточный контроль за действием пропуска
-			ul.nav.nav-pills.pull-right
-				li(role="presentation"): a(href="/")
-					i(aria-hidden="true").fa.fa-home
-					| Главная
-				li(role="presentation").active: a(href="#")
-					i(aria-hidden="true").fa.fa-user
-					| Кабинет
-				li(role="presentation"): a(href="#")
-					i(aria-hidden="true").fa.fa-info
-					| О сервисе
+			.col-md-4.col-sm-6.col-xs-12
+				a.logo(href="/")
+					img(src="../images/logo.png")
+					.small круглосуточный контроль за действием пропуска
+			.col-md-4.col-sm-6.col-xs-12.pull-right
+				ul.nav.nav-pills
+					li(role="presentation"): a(href="/")
+						i(aria-hidden="true").fa.fa-home
+						| Главная
+					li(role="presentation").active: a(href="#")
+						i(aria-hidden="true").fa.fa-user
+						| Кабинет
+					li(role="presentation"): a(href="#")
+						i(aria-hidden="true").fa.fa-info
+						| О сервисе
 		.row
-			h1 Личный кабинет
-			ol.breadcrumb
-				li: a(href="#") Личный кабинет
-				li: a(href="#") Номер
-				li.active Добавление
+			.col-md-4.col-sm-6.col-xs-12.heading
+				h1 Личный кабинет
+				.row
+					ol.breadcrumb
+						li: a(href="#") Личный кабинет
+						li: a(href="#") Номер
+						li.active Добавление 

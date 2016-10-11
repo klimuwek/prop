@@ -45,9 +45,7 @@ gulp.task('styles', function() {
                 console.log(error.message);
                 this.emit('end');
             }))
-		.pipe($.if(isDevelopment, $.sourcemaps.init()))
 		.pipe($.postcss(processors))
-		.pipe($.if(isDevelopment, $.sourcemaps.write()))
 		.pipe(gulp.dest('public'));
 });
 
@@ -77,8 +75,8 @@ gulp.task('html', function() {
                 this.emit('end');
             }))
 		.pipe($.pug({
-			pretty: true
-		}))
+            pretty: true
+        }))
 		.pipe(gulp.dest('public'));
 });
 
@@ -90,10 +88,10 @@ gulp.task('serve', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch('src/styles/**/*.*', gulp.series('styles'));
-	gulp.watch('src/scripts/**/*.*', gulp.series('scripts'));
+	gulp.watch('src/styles/**/*.css', gulp.series('styles'));
+	gulp.watch('src/scripts/**/*.js', gulp.series('scripts'));
 	gulp.watch('src/**/*.{png,jpg,jpeg,ico,gif}', gulp.series('images'));
-    gulp.watch('src/html/**/*.*', gulp.series('html'));
+    gulp.watch('src/html/**/*.pug', gulp.series('html'));
 	gulp.watch('src/fonts/*.*', gulp.series('copy'));
 });
 

@@ -1,0 +1,142 @@
+extends components/_layout.pug
+
+block title
+	title Номер
+
+block metaInfo
+	-pageMeta = {"keywords": "", "description": ""}
+	+pageMetaMxn
+
+block content
+	.container
+		.row
+			.col-md-12.col-sm-12.col-xs-12
+				button(type="submit").btn.btn-transp Добавить автомобиль
+				button(type="submit").btn.btn-transp Загрузить номера
+				.numberTable
+					table.table
+						thead
+							tr
+								td.text-center: i.fa.fa-check-square-o
+								td.text-left Назвние
+								td.text-center Номер
+								td.text-center Тип
+								td.text-center Дата начала
+								td.text-center Дата окончания
+								td.text-center Статус
+								td.text-center 
+								td.text-center Операции
+								td.text-center 
+						tbody
+							tr.success
+								td.text-center: input(type="checkbox")
+								td.text-left Камаз
+								td.text-center Номер
+								td.text-center ТТК
+								td.text-center 24.11.2009
+								td.text-center 15.07.2013
+								td.text-center Действует
+								td.text-center 
+									i.small.fa.fa-search
+									br 
+									span.small проверить
+								td.text-center 
+									i.small.fa.fa-pencil
+									br 
+									span.small редактировать
+								td.text-center 
+									i.small.fa.fa-close
+									br 
+									span.small удалить 
+							tr.active
+								td.text-center: input(type="checkbox")
+								td.text-left Камаз
+								td.text-center Номер
+								td.text-center ТТК
+								td.text-center 24.11.2009
+								td.text-center 15.07.2013
+								td.text-center Осталось 55 дней
+								td.text-center 
+									i.small.fa.fa-search
+									br 
+									span.small проверить
+								td.text-center 
+									i.small.fa.fa-pencil
+									br 
+									span.small редактировать
+								td.text-center 
+									i.small.fa.fa-close
+									br 
+									span.small удалить 
+							tr.warning
+								td.text-center: input(type="checkbox")
+								td.text-left Камаз
+								td.text-center Номер
+								td.text-center ТТК
+								td.text-center 24.11.2009
+								td.text-center 15.07.2013
+								td.text-center Закончен
+								td.text-center 
+									i.small.fa.fa-search
+									br 
+									span.small проверить
+								td.text-center 
+									i.small.fa.fa-pencil
+									br 
+									span.small редактировать
+								td.text-center 
+									i.small.fa.fa-close
+									br 
+									span.small удалить
+							tr.danger
+								td.text-center: input(type="checkbox")
+								td.text-left Камаз
+								td.text-center Номер
+								td.text-center ТТК
+								td.text-center 24.11.2009
+								td.text-center 15.07.2013
+								td.text-center Анулирован
+								td.text-center 
+									i.small.fa.fa-search
+									br 
+									span.small проверить
+								td.text-center 
+									i.small.fa.fa-pencil
+									br 
+									span.small редактировать
+								td.text-center 
+									i.small.fa.fa-close
+									br 
+									span.small удалить 
+					.paginator
+						.col-md-6.col-sm-7.col-xs-12.small Действия с выбранными:
+							span.divider 
+							a(href='#') Обновить
+							span.divider  / 
+							a(href='#') Проверить
+							span.divider  / 
+							a(href='#') Удалить
+						.col-md-6.col-sm-5.col-xs-12.text-right.small Кол-во записей на страницу: 
+							span.divider
+							a(href='#') 25
+							span.divider  
+							a(href='#') 50
+							span.divider  
+							a(href='#') 100
+					.summary
+						.col-md-12.col-sm-12.col-xs-12
+							.line
+								.left Итого:
+								| 25
+							.line
+								.left Активных:
+								| 10
+							.line
+								.left Заканчиваются сегодня:
+								| 0
+							.line
+								.left Закончились:
+								| 0
+							.line
+								.left Анулированы:
+								| 0
