@@ -7,7 +7,7 @@
 * { box-sizing: border-box; }
 
 html { height: 100%; }
-body { width: 100%; min-height: 100%; position: relative; padding-bottom: 140px; overflow-x: hidden; overflow-y: scroll; font-family: 'Open Sans', sans-serif; color: $white; font-size: 14px; text-shadow: none; background: url('../images/bg.jpg') no-repeat center top fixed; background-size: cover;
+body { width: 100%; min-height: 100%; position: relative; padding-bottom: 140px; overflow-x: hidden; overflow-y: scroll; font-family: 'Open Sans', sans-serif; color: $white; font-size: 14px; text-shadow: none; background: $black url('../images/bg.jpg') no-repeat center top fixed; background-size: cover;
 }
 
 ul li { list-style: none; }
@@ -34,6 +34,7 @@ textarea:focus { outline: none; }
     &:focus { color: $white; opacity: 1; outline: 0; }
 }
 .divider { display: inline-block; padding: 0 4px; }
+.spinner { margin: 30px auto; }
 
 header { padding: 20px 0;
     .logo { z-index: 100;
