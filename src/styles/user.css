@@ -37,8 +37,11 @@ textarea:focus { outline: none; }
 .divider { display: inline-block; padding: 0 4px; }
 .spinner { margin: 30px auto; }
 
-header { padding: 20px 0;
-    .logo { z-index: 10;
+header { 
+    &.active:before { content: ""; background: $shadow; width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 3; }
+}
+.header { padding: 20px 0;
+    .logo { 
         img { width: 284px; }
         .small { margin: -12px 0 0 69px; width: 215px; }
     }
@@ -59,7 +62,7 @@ header { padding: 20px 0;
 	.breadcrumb { background: transparent; }
 }
 
-.overlay { display: none; background: $shadow; width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 100%; z-index: 3; }
+.signUp { background: $shadow; z-index: 10; width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 0; padding: 20px 0; }
 
 .table { margin: 0;
     & > thead > tr > td { vertical-align: middle; }
@@ -88,13 +91,13 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
 
 
 @media (max-width: 767px) {
-    body { padding-bottom: 260px; 
-        &.active { 
-            .overlay { display: block; }
+    body { padding-bottom: 260px; }
+    header {
+        &.active {
             #menu { left: 22%; padding: 20px 22% 20px 0; transition: left 0.2s; }
         }
     }
-    header {
+    .header {
         .logo {
             img { width: 210px; }
             .small { margin: -12px 0 0 51px; width: 159px; }
@@ -110,6 +113,7 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
                 }
             }
         }
+    
     }
     footer { height: 260px; padding-top: 30px;
         .copy { overflow: hidden; }

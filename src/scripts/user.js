@@ -3,16 +3,16 @@
 $(document).ready(function() {
 
 
-	$("body").removeClass('active');
+	$("header").removeClass('active');
 	$("#nav-trigger").on("click", function(event) {
 		event.stopPropagation();
-		$("body").addClass('active');
+		$("header").addClass('active');
 	});
 	$("#menu").on("click", function(event) {
 		event.stopPropagation();
 	});
 	$("body").on("click", function() {
-		$("body").removeClass('active');
+		$("header").removeClass('active');
 	});
 
 	// $("[type='search']").on("blur", function() {
