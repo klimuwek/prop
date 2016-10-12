@@ -19,3 +19,72 @@ block content
 						button(type="submit" disabled="disabled").btn.btn-lg.btn-primary.col-md-2.col-sm-4.col-xs-8 Проверка
 					.row.text-center.spinner
 						i.fa.fa-spinner.fa-pulse.fa-5x.fa-fw
+				h3.text-center Хотите проверять в 2 раза быстрее?
+					br 
+					| Зарегистрируйтесь!
+	.wide.blue
+		.container
+			.row.vNeck
+				.benefits
+					h4.text-center Преимущества для зарегистрированных пользователей
+					figure.col-md-3.col-sm-3.col-xs-6
+						figcaption Проверки в 2 раза быстрее
+						i.fa.fa-clock-o.fa-4x
+					figure.col-md-3.col-sm-3.col-xs-6
+						figcaption Уведомления о выходе пропусков
+						i.fa.fa-bell.fa-4x
+					figure.col-md-3.col-sm-3.col-xs-6
+						figcaption Уведомления об окончании пропусков
+						i.fa.fa-envelope-o.fa-4x
+					figure.col-md-3.col-sm-3.col-xs-6
+						figcaption Уведомления об окончании пропусков
+						i.fa.fa-calendar-times-o.fa-4x
+			.row
+				form.col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3
+					.form-group
+						input(type="text" name="name" placeholder="Ваше имя").form-control
+					.form-group
+						input(type="email" name="email" placeholder="Эл. почта для получения уведомлений").form-control
+					.form-group
+						input(type="text" name="phone" placeholder="Телефон").form-control
+					button(type="submit").btn.btn-transp.col-md-12.col-sm-12.col-xs-12 Проверять быстрее!
+			.row
+				p.col-md-12.col-sm-12.text-center Я уже зарегистрирован - 
+						a(gref="#") Войти
+	.container
+		.row.text-center
+			p Результаты последней проверки от 10.09.2016 14:34
+			table.table
+				thead
+					tr
+						td Номер
+						td Тип
+						td Дата начала
+						td Дата окончания
+						td Статус
+				tbody
+					tr.success
+						td Номер
+						td ТТК
+						td 24.11.2009
+						td 15.07.2013
+						td Действует
+					tr.active
+						td Номер
+						td ТТК
+						td 24.11.2009
+						td 15.07.2013
+						td Осталось 55 дней
+					tr.warning
+						td Номер
+						td ТТК
+						td 24.11.2009
+						td 15.07.2013
+						td Закончен
+					tr.danger
+						td Номер
+						td ТТК
+						td 24.11.2009
+						td 15.07.2013
+						td Анулирован 
+			a(href="#").btn.btn-transp Проверять быстрее!
