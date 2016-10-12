@@ -62,7 +62,19 @@ header {
 	.breadcrumb { background: transparent; }
 }
 
-.signUp { background: $shadow; z-index: 10; width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 0; padding: 20px 0; }
+.signUp { background: $shadow; z-index: 10; width: 100%; height: 100%; position: absolute; top: 0; left: 0; padding: 20px 0; 
+    .popClose { margin-top: 10px; vertical-align: middle; }
+    form { margin-bottom: 20px;
+        .codeInput { text-align: left; vertical-align: top;
+            span { display: inline-block; width: 69%; padding-right: 4%; float: left; }
+            input { display: inline-block; width: 30%; }
+        }
+    }
+    figure { position: relative;
+        &:after { content: ""; position: absolute; display: block; background: $white; height: 60%; margin-top: 20%; left: 0; top: 0; width: 1px; }
+        figcaption { height: 40px; }
+    }
+}
 
 .table { margin: 0;
     & > thead > tr > td { vertical-align: middle; }
