@@ -18,7 +18,7 @@ header.header
 						li(role="presentation").active: a(href="#")
 							i(aria-hidden="true").fa.fa-user
 							| Кабинет
-						li(role="presentation"): a(href="#")
+						li(role="presentation"): a(href="#").openSignUp
 							i(aria-hidden="true").fa.fa-info
 							| О сервисе
 		.row
@@ -29,7 +29,7 @@ header.header
 						li: a(href="#") Личный кабинет
 						li: a(href="#") Номер
 						li.active Добавление
-	.signUp
+	.signUp.hidden-xs
 		.container.text-center
 			.row
 				.col-md-4.col-sm-6.col-xs-9.logoCont.text-left
@@ -40,7 +40,7 @@ header.header
 					| Вернуться на главную  
 					i(aria-hidden="true").fa.fa-close.fa-2x
 			.row
-				form.col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3
+				form.col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.signUpForm
 					h2 Зарегистрироваться
 					.form-group
 						input(type="text" name="name" placeholder="Ваше имя").form-control
@@ -62,15 +62,16 @@ header.header
 						a(gref="#") Войти
 			.row
 				h4 Преимущества для зарегистрированных пользователей
-				figure.col-md-3.col-sm-3.col-xs-6
-					figcaption Проверки в 2 раза быстрее
-					i.fa.fa-clock-o.fa-4x
-				figure.col-md-3.col-sm-3.col-xs-6
-					figcaption Уведомления о выходе пропусков
-					i.fa.fa-bell.fa-4x
-				figure.col-md-3.col-sm-3.col-xs-6
-					figcaption Уведомления об окончании пропусков
-					i.fa.fa-envelope-o.fa-4x
-				figure.col-md-3.col-sm-3.col-xs-6
-					figcaption Уведомления об окончании пропусков
-					i.fa.fa-calendar-times-o.fa-4x
+				.benefits
+					figure.col-md-3.col-sm-3.col-xs-6
+						figcaption Проверки в 2 раза быстрее
+						i.fa.fa-clock-o.fa-4x
+					figure.col-md-3.col-sm-3.col-xs-6
+						figcaption Уведомления о выходе пропусков
+						i.fa.fa-bell.fa-4x
+					figure.col-md-3.col-sm-3.col-xs-6
+						figcaption Уведомления об окончании пропусков
+						i.fa.fa-envelope-o.fa-4x
+					figure.col-md-3.col-sm-3.col-xs-6
+						figcaption Уведомления об окончании пропусков
+						i.fa.fa-frown-o.fa-4x
