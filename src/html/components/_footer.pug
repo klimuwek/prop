@@ -1,16 +1,26 @@
 footer
 	.container
 		.row
-			.col-md-6.col-sm-4.col-xs-12.copy © Proverit-propusk.ru 2016
+			.col-md-6.col-sm-4.hidden-xs.copy © Proverit-propusk.ru 2016
 				br
 				a(href='#') Реклама на портале
-			.col-md-6.col-sm-8.col-xs-12.pull-right.text-right.socials
-				a(href="#")
-					img(src="images/download-ap.png")
-				a(href="#")
-					img(src="images/download-go.png")
-				a(href="#")
-					img(src="images/download-tg.png")
+			.col-xs-offset-1.col-xs-10.visible-xs.text-center Проверяйте быстро с помощью приложений:
+			.col-md-6.col-sm-8.col-xs-12.socials
+				.platform
+					a(href="#")
+						img(src="images/download-ap.png")
+					.small.visible-xs IOS
+				.platform
+					a(href="#")
+						img(src="images/download-go.png")
+					.small.visible-xs Android
+				.platform
+					a(href="#")
+						img(src="images/download-tg.png")
+					.small.visible-xs Telegram
+			.visible-xs.col-xs-12.copy.text-center © Proverit-propusk.ru 2016
+				br
+				a(href='#') Реклама на портале
 
 script(src="https://code.jquery.com/jquery-3.1.1.min.js")
 script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")

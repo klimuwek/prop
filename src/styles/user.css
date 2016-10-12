@@ -68,18 +68,32 @@ header { padding: 20px 0;
     }
 }
 
-footer { position: absolute;  left: 0; bottom: 0; right: 0; height: 140px; padding-top: 60px;
-    .copy { margin-top: 10px; }
-    .socials {
-        a { margin-left: 4px; 
-            img { width: 142px; display: inline-block; border: 1px solid $white; border-radius: 6px; }
+footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; padding-top: 50px;
+    .copy { margin-top: 10px; padding-top: 10px }
+    .socials { text-align: right; float: right; padding-top: 10px;
+        .platform { display: inline-block; margin: 0 2px;
+            a { display: inline-block; width: 142px; border-radius: 6px; border: 1px solid $white; overflow: hidden;
+                img { width: 142px; display: inline-block; }
+            }
         }
     }
 }
 
 
 
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+    body { padding-bottom: 260px; }
+    footer { height: 260px; padding-top: 30px;
+        .copy { overflow: hidden; }
+        .socials { text-align: center; float: none; overflow: hidden;
+            .platform { margin: 0 4px;
+                a { width: 64px;
+                    img { width: 200px; }
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: 768px) and (max-width: 991px) {}
 
