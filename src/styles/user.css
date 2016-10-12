@@ -34,7 +34,7 @@ textarea:focus { outline: none; }
 form { padding-bottom: 20px; }
 
 .container { padding-bottom: 10px; }
-.btn-transp { border: 1px solid $white; opacity: 0.9; font-size: 18px; border-radius: 6px;
+.btn-transp { border: 1px solid $white; opacity: 0.9; font-size: 18px; border-radius: 6px; background: transparent;
     &:hover, &:active { color: $white; opacity: 1; }
     &:focus { color: $white; opacity: 1; outline: 0; }
 }
