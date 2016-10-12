@@ -25,10 +25,28 @@ block content
 					|, чтобы продолжить работу с сервисом
 	.wide.blue
 		.container
+			.row
+				form.col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3
+					.form-group
+						input(type="email" name="email" placeholder="Ваша эл. почта").form-control
+					.form-group
+						input(type="text" name="pass" placeholder="Пароль").form-control
+					button(type="submit").btn.btn-transp.col-md-12.col-sm-12.col-xs-12 Проверять быстрее!
+				p.small 
+				a(href="#") Напомнить пароль
+				|  / 
+				a(href="#") Зарегистрироваться
+	.container
+		.row
+			h3 
+				| Хотите проверять в 2 раза быстрее?
+				br
+				| Зарегистрируйтесь!
+	.wide.blue
+		.container
 			.row.vNeck
 				include components/_benefits
 			.row
 				include components/_signupform
 			.row
-				p.col-md-12.col-sm-12.text-center Я уже зарегистрирован - 
-						a(gref="#") Войти
+				p.col-md-12.col-sm-12.text-center Использование сервиса, а также email и SMS абсолютно бесплатны. Для защиты от спама требуется подтверждение email и номера мобильного телефона

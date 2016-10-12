@@ -5,22 +5,21 @@ header.header
 				a.logo(href="/")
 					img(src="../images/logo.png")
 					.small круглосуточный контроль за действием пропуска
-			.visible-xs.col-xs-3.pull-right.text-right
+			.visible-xs.col-xs-3
 				i(aria-hidden="true").fa.fa-bars.fa-2x#nav-trigger
-			#menu
-				.col-md-4.col-sm-6
-					a(href="#").btn.btn-transp.visible-xs Зарегистрироваться
-					a(href="#").btn.btn-transp.visible-xs Войти
-					ul.nav.nav-pills
-						li(role="presentation"): a(href="/")
-							i(aria-hidden="true").fa.fa-home
-							| Главная
-						li(role="presentation").active: a(href="#")
-							i(aria-hidden="true").fa.fa-user
-							| Кабинет
-						li(role="presentation"): a(href="#").openSignUp
-							i(aria-hidden="true").fa.fa-info
-							| О сервисе
+			#menu.pull-right.text-right.col-md-5.col-sm-6
+				a(href="#").btn.btn-transp.visible-xs Зарегистрироваться
+				a(href="#").btn.btn-transp.visible-xs Войти
+				ul.nav.nav-pills
+					li(role="presentation"): a(href="/")
+						i(aria-hidden="true").fa.fa-home
+						| Главная
+					li(role="presentation").active: a(href="#")
+						i(aria-hidden="true").fa.fa-user
+						| Кабинет
+					li(role="presentation"): a(href="#").openSignUp
+						i(aria-hidden="true").fa.fa-info
+						| О сервисе
 		.row
 			.col-md-4.col-sm-6.col-xs-12.heading
 				h1 Личный кабинет
