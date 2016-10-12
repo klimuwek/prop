@@ -15,6 +15,15 @@ $(document).ready(function() {
 		$("header").removeClass('active');
 	});
 
+	$(".openSignUp").on("click", function(event) {
+		event.stopPropagation();
+		$(".signUp").addClass('active');
+	});
+	$(".signUp .fa-close").on("click", function(event) {
+		event.stopPropagation();
+		$(".signUp").removeClass('active');
+	});
+
 	// $("[type='search']").on("blur", function() {
 	// 	var value = $(this).val(),
 	// 		trimed = $.trim(value);
