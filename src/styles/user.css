@@ -144,7 +144,10 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
         .heading { margin-top: 10px; }
     }
     .benefits figure + figure:after { display: none; }
-    .tile { background: $yellow; border-radius: 6px; color: $black; }
+    .tile { background: $yellow; border-radius: 6px; color: $black; padding: 15px;
+        div { margin: 0; }
+        .name, .type { font-size: 18px; }
+    }
     footer { height: 260px; padding-top: 30px;
         .copy { overflow: hidden; }
         .socials { text-align: center; float: none; overflow: hidden;

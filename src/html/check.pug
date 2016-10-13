@@ -16,7 +16,7 @@ block content
 					.form-group.col-md-8.col-sm-8.col-xs-12
 						input(type="text" placeholder="Введите гос. номер автомобиля...").form-control
 					button(type="submit" disabled="disabled").btn.btn-lg.btn-primary.col-md-4.col-sm-4.col-xs-12 Проверка
-				.spinner.text-center.hidden-xs
+				.spinner.text-center
 					i.fa.fa-spinner.fa-pulse.fa-5x.fa-fw
 				h3.text-center Хотите проверять в 2 раза быстрее?
 					br 
@@ -63,13 +63,6 @@ block content
 							td 24.11.2009
 							td 15.07.2013
 							td Анулирован 
-				.tile.visible-xs.col-sx-12
-					p td A986MO88
-					p № BB 987503846
-					p МКАД
-					p c 01.10.2015 по 31.09.2016
-					p Осталось 55 дней
-				.form-group.visible-xs
-					a(href="#").btn.btn-transp.form-control Развернуть все номера
+				include components/_tile
 			.form-group.col-md-4.col-md-offset-4.col-sm-4.col-sm-offset-4
 				a(href="#").btn.btn-lg.btn-primary.col-xs-12 Отслеживать пропуск
