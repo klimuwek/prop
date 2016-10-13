@@ -46,9 +46,9 @@ form { padding-bottom: 20px; }
 .wide { width: 100%; padding: 20px 0; }
 .benefits { padding-bottom: 30px; overflow: hidden;
     figure { position: relative; text-align: center;
-        &:after { content: ""; position: absolute; display: block; background: $white; height: 60%; margin-top: 20%; left: 0; top: 0; width: 1px; }
-        &:first-of-type:after { display: none; }
+        & + figure:after { content: ""; position: absolute; display: block; background: $white; height: 60%; left: 0; top: 20%; width: 1px; }
         figcaption { height: 40px; margin-bottom: 10px; }
+        i { margin-bottom: 20px; }
     }
 }
 
@@ -59,7 +59,7 @@ form { padding-bottom: 20px; }
     }
 }
 
-header { 
+header { height: 290px;
     &.active:before { content: ""; background: $shadow; width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 3; }
 }
 .header { padding: 20px 0;
@@ -90,13 +90,14 @@ header {
 }
 
 .table {
-    & > thead > tr > td { vertical-align: middle; }
-    & > tbody > tr > td { vertical-align: middle; }
-    td {  height: 60px; }
+    & > thead > tr > td { vertical-align: middle; padding: 4px 6px; }
+    & > tbody > tr > td { vertical-align: middle; padding: 4px 6px; }
+    td { height: 44px; }
 }
 
 .numberTable { border-top: 1px solid $white; margin: 20px 0;
-    .paginator { color: $gray; line-height: 60px; border-bottom: 1px solid $white; overflow: hidden; }
+    table { margin-bottom: 0; }
+    .paginator { color: $gray; line-height: 49px; border-bottom: 1px solid $white; overflow: hidden; }
     .summary { padding-top: 15px; padding-bottom: 15px; overflow: hidden;
         .left { width: 200px; display: inline-block; }
     }
