@@ -14,7 +14,7 @@ body { width: 100%; min-height: 100%; position: relative; padding-bottom: 140px;
 ul li { list-style: none; }
 a { text-decoration: underline; color: $white;
     &:hover { text-decoration: none; color: $white; }
-	&.btn { text-decoration: none; color: $white; height: 60px; line-height: 38px; }
+	&.btn { text-decoration: none; color: $white; height: 60px; line-height: 40px; padding-top: 8px; padding-bottom: 8px; }
 }
 
 input[type="text"],
@@ -32,9 +32,9 @@ input:focus,
 select:focus, 
 textarea:focus { outline: none; }
 
-form { padding-bottom: 20px; }
+form { padding-bottom: 20px; overflow: hidden; }
 
-.container { padding: 20px 0; }
+.container { padding-top: 20px; padding-bottom: 20px; }
 .btn-transp { border: 1px solid $white; opacity: 0.9; font-size: 18px; border-radius: 6px; background: transparent;
     &:hover, &:active { color: $white; opacity: 1; }
     &:focus { color: $white; opacity: 1; outline: 0; }
@@ -70,8 +70,8 @@ header { height: 290px;
         .small { margin: -12px 0 0 69px; width: 215px; }
     }
     #nav-trigger { z-index: 100; }
-    #menu { text-align: right; }
-    .nav { padding-top: 9px;
+    #menu { text-align: right; float: right; }
+    .nav { padding-top: 9px; float: right;
         li { margin-left: 4px;
             a { text-decoration: none; height: 50px; line-height: 30px;
                 i { margin-right: 5px; color: $blue; font-size: 18px; }
@@ -131,10 +131,10 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
             .small { margin: -12px 0 0 51px; width: 159px; }
         }
         #nav-trigger { padding: 1px 3px; }
-        #menu { text-align: initial; background: $blue; width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 100%; z-index: 5; transition: left 0.2s;
+        #menu { text-align: initial; background: $blue; width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 100%; z-index: 5; transition: left 0.2s; float: none;
             .btn { margin: 0 auto 15px; max-width: 220px; }
-            .nav { 
-                li { float: none;
+            .nav { padding-left: 20px; float: none;
+                li { 
                     a { width: 220px; margin: auto;
                         i { color: $white; } 
                     }
@@ -143,6 +143,8 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
         }
     
     }
+    .benefits figure + figure:after { display: none; }
+    .tile { background: $yellow; border-radius: 6px; color: $black; }
     footer { height: 260px; padding-top: 30px;
         .copy { overflow: hidden; }
         .socials { text-align: center; float: none; overflow: hidden;

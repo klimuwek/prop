@@ -2,7 +2,6 @@
 
 $(document).ready(function() {
 
-
 	$("header").removeClass('active');
 	$("#nav-trigger").on("click", function(event) {
 		event.stopPropagation();
@@ -25,6 +24,8 @@ $(document).ready(function() {
 		$(".signUp").removeClass('active');
 		$("body").removeClass('lock');
 	});
+
+	$('[name="phone"]').mask('+7 (000) 000-00-00');
 
 	// $("[type='search']").on("blur", function() {
 	// 	var value = $(this).val(),
