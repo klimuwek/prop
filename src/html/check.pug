@@ -27,14 +27,7 @@ block content
 			.row.vNeck
 				include components/_benefits
 			.row
-				form.col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3
-					.form-group
-						input(type="text" name="name" placeholder="Ваше имя").form-control
-					.form-group
-						input(type="email" name="email" placeholder="Эл. почта для получения уведомлений").form-control
-					.form-group
-						input(type="text" name="phone" placeholder="Телефон").form-control
-					button(type="submit").btn.btn-transp.col-md-12.col-sm-12.col-xs-12 Проверять быстрее!
+				include components/_signupform
 			.row
 				p.col-md-12.col-sm-12.text-center Я уже зарегистрирован - 
 						a(gref="#") Войти
