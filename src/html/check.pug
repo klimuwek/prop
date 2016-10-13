@@ -32,41 +32,44 @@ block content
 						a(gref="#") Войти
 	.container
 		.row.text-center
-			p Результаты последней проверки от 10.09.2016 14:34
-			table.table.table-bordered.hidden-xs
-				thead
-					tr
-						td Номер
-						td Тип
-						td Дата начала
-						td Дата окончания
-						td Статус
-				tbody.text-left.blackColor
-					tr.success
+			.col-md-12.col-sm-12.col-xs-12
+				p Результаты последней проверки от 10.09.2016 14:34
+				table.table.table-bordered.hidden-xs
+					thead
+						tr
+							td Номер
+							td Тип
+							td Дата начала
+							td Дата окончания
+							td Статус
+					tbody.text-left.blackColor
+						tr.success
 
-					tr.active
-						td Номер
-						td ТТК
-						td 24.11.2009
-						td 15.07.2013
-						td Осталось 55 дней
-					tr.warning
-						td Номер
-						td ТТК
-						td 24.11.2009
-						td 15.07.2013
-						td Закончен
-					tr.danger
-						td Номер
-						td ТТК
-						td 24.11.2009
-						td 15.07.2013
-						td Анулирован 
-			.tile.visible-xs.col-sx-10
-				p td A986MO88
-				p № BB 987503846
-				p МКАД
-				p c 01.10.2015 по 31.09.2016
-				p Осталось 55 дней
-			a(href="#").btn.btn-transp.visible-xs.col-sx-10 Развернуть все номера
-			a(href="#").btn.btn-lg.btn-primary Отслеживать пропуск
+						tr.active
+							td Номер
+							td ТТК
+							td 24.11.2009
+							td 15.07.2013
+							td Осталось 55 дней
+						tr.warning
+							td Номер
+							td ТТК
+							td 24.11.2009
+							td 15.07.2013
+							td Закончен
+						tr.danger
+							td Номер
+							td ТТК
+							td 24.11.2009
+							td 15.07.2013
+							td Анулирован 
+				.tile.visible-xs.col-sx-12
+					p td A986MO88
+					p № BB 987503846
+					p МКАД
+					p c 01.10.2015 по 31.09.2016
+					p Осталось 55 дней
+				.form-group.visible-xs
+					a(href="#").btn.btn-transp.form-control Развернуть все номера
+			.form-group.col-md-4.col-md-offset-4.col-sm-4.col-sm-offset-4
+				a(href="#").btn.btn-lg.btn-primary.col-xs-12 Отслеживать пропуск
