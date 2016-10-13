@@ -18,10 +18,12 @@ $(document).ready(function() {
 	$(".openSignUp").on("click", function(event) {
 		event.stopPropagation();
 		$(".signUp").addClass('active');
+		$("body").addClass('lock');
 	});
 	$(".signUp .fa-close").on("click", function(event) {
 		event.stopPropagation();
 		$(".signUp").removeClass('active');
+		$("body").removeClass('lock');
 	});
 
 	// $("[type='search']").on("blur", function() {
