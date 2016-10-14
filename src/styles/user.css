@@ -7,7 +7,7 @@
 * { box-sizing: border-box; }
 
 html { height: 100%; }
-body { width: 100%; min-height: 100%; position: relative; padding-bottom: 140px; overflow-x: hidden; overflow-y: scroll; font-family: 'Open Sans', sans-serif; color: $white; font-size: 14px; text-shadow: none; background: $black url('../images/bg.jpg') no-repeat center top fixed; background-size: cover;
+body { width: 100%; min-height: 100%; position: relative; padding-bottom: 140px; overflow-x: hidden; overflow-y: auto; font-family: 'Open Sans', sans-serif; color: $white; font-size: 14px; text-shadow: none; background: $black url('../images/bg.jpg') no-repeat center top fixed; background-size: cover;
     &.lock { overflow-y: hidden; }
 }
 
@@ -52,7 +52,7 @@ form { padding-bottom: 20px; overflow: hidden; }
 .benefits { padding-bottom: 30px; overflow: hidden;
     figure { position: relative; text-align: center;
         & + figure:after { content: ""; position: absolute; display: block; background: $white; height: 60%; left: 0; top: 20%; width: 1px; }
-        figcaption { height: 40px; margin-bottom: 10px; }
+        figcaption { min-height: 40px; margin-bottom: 10px; }
         i { margin-bottom: 20px; }
     }
 }
@@ -125,7 +125,18 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
 
 @media (max-width: 767px) {
     body { padding-bottom: 240px; }
+
     h1 { font-size: 30px; margin-top: 0; }
+    input[type="text"],
+    input[type="search"],
+    input[type="email"],
+    input[type="submit"],
+    button, select,
+    .form-control { height: 50px; font-size: 16px; }
+    btn.btn { font-size: 16px; }
+    .btn-transp { font-size: 16px; }
+    a.btn { height: 50px; line-height: 30px; }
+
     header { min-height: 190px;
         &.active {
             #menu { left: 22%; padding: 20px 22% 20px 0; transition: left 0.2s; }
@@ -151,11 +162,12 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
         .breadcrumb { margin-bottom: 0; }
     }
     .benefits figure + figure:after { display: none; }
-    .tile { background: $yellow_table; border-radius: 6px; color: $black; padding: 15px; margin-bottom: 15px;
+    .tile { background: $yellow_table; border-radius: 6px; color: $black; padding: 15px; margin-top: 15px; margin-bottom: 15px;
         div { margin: 0; }
         .name, .type { font-size: 18px; }
     }
     .col-xs-12 > form > .form-group { padding: 0; }
+    .spinner { margin: 20px auto; }
     .signUpForm {
         .codeInput { 
             span { width: 74%; padding-right: 4%; float: left; }
