@@ -11,6 +11,8 @@ body { width: 100%; min-height: 100%; position: relative; padding-bottom: 140px;
     &.lock { overflow-y: hidden; }
 }
 
+@import 'helpers/_custom.css';
+
 ul li { list-style: none; }
 a { text-decoration: underline; color: $white;
     &:hover { text-decoration: none; color: $white; }
@@ -35,14 +37,15 @@ textarea:focus { outline: none; }
 form { padding-bottom: 20px; overflow: hidden; }
 
 .container { padding-top: 20px; padding-bottom: 20px; }
+
 .btn-transp { border: 1px solid $white; opacity: 0.9; font-size: 18px; border-radius: 6px; background: transparent;
     &:hover, &:active { color: $white; opacity: 1; }
     &:focus { color: $white; opacity: 1; outline: 0; }
 }
 .divider { display: inline-block; padding: 0 4px; }
 .spinner { margin: 30px auto; }
-.blue { background: $blue; }
-.blueColor { color: $blue; }
+.blue { background: $blue_bg; }
+.blueColor { color: $blue_btn; }
 .redColor { color: $red; }
 .blackColor { color: $black; }
 .wide { width: 100%; }
@@ -74,12 +77,14 @@ header { min-height: 290px;
     .nav { padding-top: 9px; float: right;
         li { margin-left: 4px;
             a { text-decoration: none; height: 50px; line-height: 30px;
-                i { margin-right: 5px; color: $blue; font-size: 18px; }
+                i { margin-right: 5px; color: $blue_btn; font-size: 18px; }
             }
-            &:hover a { background-color: $blue;
+            &:hover a { background-color: $blue_btn;
                 i { color: $white; }
             }
-            &.active a i { color: $white; }
+            &.active a { background-color: $blue_btn;
+                i { color: $white; }
+            }
         }
     }
     .heading { margin-top: 30px; }
@@ -119,8 +124,9 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
 
 
 @media (max-width: 767px) {
-    body { padding-bottom: 260px; }
-    header { min-height: 220px;
+    body { padding-bottom: 240px; }
+    h1 { font-size: 30px; margin-top: 0; }
+    header { min-height: 190px;
         &.active {
             #menu { left: 22%; padding: 20px 22% 20px 0; transition: left 0.2s; }
         }
@@ -131,7 +137,7 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
             .small { margin: -12px 0 0 51px; width: 159px; }
         }
         #nav-trigger { padding: 1px 3px; }
-        #menu { text-align: initial; background: $blue; width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 100%; z-index: 5; transition: left 0.2s; float: none;
+        #menu { text-align: initial; background: $blue_bg; width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 100%; z-index: 5; transition: left 0.2s; float: none;
             .btn { margin: 0 auto 15px; max-width: 220px; }
             .nav { padding-left: 20px; float: none;
                 li { 
@@ -142,9 +148,10 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
             }
         }
         .heading { margin-top: 10px; }
+        .breadcrumb { margin-bottom: 0; }
     }
     .benefits figure + figure:after { display: none; }
-    .tile { background: $yellow; border-radius: 6px; color: $black; padding: 15px; margin-bottom: 15px;
+    .tile { background: $yellow_table; border-radius: 6px; color: $black; padding: 15px; margin-bottom: 15px;
         div { margin: 0; }
         .name, .type { font-size: 18px; }
     }
@@ -155,7 +162,7 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
             input { width: 25%; }
         }
     }
-    footer { height: 260px; padding-top: 30px;
+    footer { height: 240px; padding-top: 0;
         .copy { overflow: hidden; }
         .socials { text-align: center; float: none; overflow: hidden;
             .platform { margin: 0 4px;
