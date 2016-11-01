@@ -1,14 +1,15 @@
 {
-  "name": "gulp-boilerplate",
+  "name": "Проверить пропуск",
   "version": "0.1.0",
-  "description": "My gulp boilerplate",
-  "main": "dist/index.html",
+  "description": "Проверка пропуска на МКАД, СК, ТТК по гос. номеру машины",
+  "main": "public/index.html",
   "repository": {
     "type": "git",
-    "url": "git://github.com/klimuwek/gulp-boilerplate.git"
+    "url": "git://github.com/klimuwek/prop.git"
   },
   "scripts": {
-    "test": "standard"
+    "test": "standard",
+    "win_build": "set NODE_ENV=production&&gulp build"
   },
   "author": "klimuwek <klimuwek@gmail.com>",
   "license": "MIT",
@@ -29,7 +30,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0",
     "postcss-discard-comments": "^2.0.4",
-    "postcss-nested": "^1.0.0",
+    "postcss-nesting": "^2.3.1",
     "precss": "^1.4.0"
   }
 }
