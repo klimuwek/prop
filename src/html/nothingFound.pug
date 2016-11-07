@@ -11,19 +11,7 @@ block content
 	.container
 		.row
 			.col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1.col-xs-12
-				form.text-center
-					.form-group.col-md-8.col-sm-7.col-xs-12
-						input(type="text" placeholder="Введите гос. номер автомобиля...").form-control
-					.col-md-4.col-sm-5.col-xs-12
-						button(type="submit").btn.btn-lg.btn-primary.btn-block Проверить пропуск
-					.col-md-12.col-sm-12.col-xs-12
-						.text-center.spinner
-							i.fa.fa-times-circle.fa-5x.redColor
-						h3.text-center Пропуск в базе департамента не найден
-						p.small.text-center 
-							| База не доступна. Проверьте на 
-							a(href="#") официальном сайте
-					.col-md-6.col-sm-6.col-xs-12.btns
-						button(type="button").btn.btn-lg.btn-primary Отслеживать пропуск
-					.col-md-6.col-sm-6.col-xs-12.btns
-						button(type="button").btn.btn-lg.btn-primary Заказать пропуск
+				- var form_enabled = true
+				- var form_notFound = true
+				- var form_buttons = true
+				include components/_mainsearch

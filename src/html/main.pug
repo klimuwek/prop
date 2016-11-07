@@ -13,9 +13,5 @@ block content
 			.col-md-8.col-sm-10.col-xs-12
 				h1 Проверка пропуска на МКАД, СК, ТТК по гос. номеру машины 
 				p Сервис позволяет проверить пропуск на МКАД, ТТК, СК , по гос номеру машины, теперь вам не нужно беспокоиться за ваши пропуска, просто введите номер автомобиля и мы будем постоянно следить за действием вашего пропуска
+				- var form_enabled = true
 				include components/_mainsearch
-				form.main-search
-					.row
-						.form-group.col-md-8.col-sm-8.col-xs-12
-							input(type="text" placeholder="Введите гос. номер автомобиля...").form-control
-						button(type="submit").btn.btn-lg.btn-primary.col-md-4.col-sm-4.col-xs-12 Проверить
