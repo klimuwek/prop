@@ -42,6 +42,7 @@ form { padding-bottom: 20px; overflow: hidden; }
     &:hover, &:active { color: $white; opacity: 1; }
     &:focus { color: $white; opacity: 1; outline: 0; }
 }
+.btns button { width: 100%; margin-top: 15px; }
 .divider { display: inline-block; padding: 0 4px; }
 .spinner { margin: 30px auto; }
 .blue { background: $blue_bg; }
