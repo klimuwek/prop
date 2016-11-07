@@ -1,7 +1,7 @@
 {
-  "name": "Проверить пропуск",
+  "name": "Propusk",
   "version": "0.1.0",
-  "description": "Проверка пропуска на МКАД, СК, ТТК по гос. номеру машины",
+  "description": "",
   "main": "public/index.html",
   "repository": {
     "type": "git",
