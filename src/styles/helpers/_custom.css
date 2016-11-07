@@ -1,6 +1,6 @@
 @import '_variables.css';
 
-.btn-primary { background-color: $blue_btn; }
+.btn-primary { background-color: $blue_btn; background-image: none; }
 .table>tbody>tr.danger>td { background-color: $red_table; }
 .table>tbody>tr.active>td { background-color: $gray_table; }
 .table>tbody>tr.success>td { background-color: $green_table; }
