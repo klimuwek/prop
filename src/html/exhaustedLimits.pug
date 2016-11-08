@@ -8,7 +8,11 @@ block metaInfo
 	+pageMetaMxn
 
 block content
-	.container
+	- var crumbs = true
+	.container.head
+		.row
+			include components/_crumbs
+	.container.main
 		.row
 			.col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1.col-xs-12
 				- var form_disabled = true

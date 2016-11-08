@@ -1,5 +1,3 @@
-- var crumbs = false
-
 extends components/_layout
 
 block title
@@ -10,7 +8,11 @@ block metaInfo
 	+pageMetaMxn
 
 block content
-	.container
+	- var crumbs = false
+	.container.head
+		.row
+			include components/_crumbs
+	.container.main
 		.row
 			.col-md-8.col-sm-10.col-xs-12
 				h1 Проверка пропуска на МКАД, СК, ТТК по гос. номеру машины 

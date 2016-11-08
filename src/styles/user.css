@@ -65,7 +65,7 @@ form { padding-bottom: 20px; overflow: hidden; }
     }
 }
 
-header { min-height: 290px;
+header {
     &.active:before { content: ""; background: $shadow; width: 100%; height: 100%; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 3; }
 }
 .header { padding: 20px 0;
@@ -88,9 +88,10 @@ header { min-height: 290px;
             }
         }
     }
-    .heading { margin-top: 30px; }
-	.breadcrumb { background: transparent; }
 }
+
+.heading { margin-top: 30px; }
+.breadcrumb { background: transparent; }
 
 .signUp { display: none; background: $shadow; z-index: 10; width: 100%; height: 100%; position: fixed; top: 0; left: 0; padding: 20px 0; overflow-x: hidden; overflow-y: auto;
     &.active { display: block; }

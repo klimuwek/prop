@@ -8,7 +8,11 @@ block metaInfo
 	+pageMetaMxn
 
 block content
-	.container
+	- var crumbs = true
+	.container.head
+		.row
+			include components/_crumbs
+	.container.main
 		.row
 			.col-md-12.col-sm-12.col-xs-12
 				button(type="submit").btn.btn-transp Добавить автомобиль

@@ -8,19 +8,18 @@ block metaInfo
 	+pageMetaMxn
 
 block content
-	.container
+	- var crumbs = true
+	.container.head
+		.row
+			include components/_crumbs
+	.container.main
 		.row
 			.col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1.col-xs-12
-				form.text-center
-					p Проверяем пропуск. Обычно проверка занимает 30 секунд...
-					.form-group.col-md-8.col-sm-8.col-xs-12
-						input(type="text" placeholder="Введите гос. номер автомобиля...").form-control
-					button(type="submit" disabled="disabled").btn.btn-lg.btn-primary.col-md-4.col-sm-4.col-xs-12 Проверка
-				.spinner.text-center
-					i.fa.fa-spinner.fa-pulse.fa-5x.fa-fw
-				h3.text-center Хотите проверять в 2 раза быстрее?
-					br 
-					| Зарегистрируйтесь!
+				- var form_checking = true
+				- var form_enabled = true
+				- var form_spinner = true
+				- var form_register = true
+				include components/_mainsearch
 	.wide.blue
 		.container
 			.row.vNeck
@@ -44,7 +43,11 @@ block content
 							td Статус
 					tbody.text-left.blackColor
 						tr.success
-
+							td Номер
+							td ТТК
+							td 24.11.2023
+							td 05.07.2048
+							td всего 5 дней
 						tr.active
 							td Номер
 							td ТТК
