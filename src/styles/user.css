@@ -127,8 +127,12 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
             }
         }
     }
+    .banner { background: $light-gray; position: relative; text-align: center; display: block;
+        &:before, &:after { content: ''; display: block; position: absolute; top: 0; width: 50%; height: 100%; background: $light-gray; }
+        &:before { right: 100%; }
+        &:after { left: 100%; }
+    }
 }
-
 
 
 @media (max-width: 767px) {
@@ -194,8 +198,12 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+    footer .banner img { width: 768px; }
+}
 
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+    footer .banner img { width: 992px; }
+}
 
 @media (min-width: 1200px) {}
