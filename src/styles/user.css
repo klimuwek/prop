@@ -59,7 +59,7 @@ form { padding-bottom: 20px; overflow: hidden; }
 }
 
 .main-search {
-    input { color: $black; 
+    input { color: $black; font-size: 28px;
         &:disabled { color: $gray; }
     }
 }
@@ -176,9 +176,6 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
     }
     .col-xs-12 > form > .form-group { padding: 0; }
     .spinner { margin: 20px auto; }
-    .main-search {
-        input { font-size: 28px; }
-    }
     .signUpForm {
         .codeInput { 
             span { width: 74%; padding-right: 4%; float: left; }
