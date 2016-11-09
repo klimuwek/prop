@@ -1,12 +1,12 @@
 form.main-search
 	.row
 		if form_checking
-			.text-center
+			.col-md-12.col-sm-12.col-xs-12.text-center
 				p Проверяем пропуск. Обычно проверка занимает 30 секунд...
 			.form-group.col-md-7.col-sm-7.col-xs-12
-				input(type="text" placeholder="Введите гос. номер автомобиля..." disabled="disabled" value="AA11AAA111").form-control
+				input(type="text" placeholder="Введите гос. номер автомобиля..." value="AA11AAA111").form-control
 			.col-md-5.col-sm-5.col-xs-12
-				button(type="submit" disabled="disabled").btn.btn-lg.btn-primary.btn-block
+				button(type="submit" style="padding: 5px;").btn.btn-lg.btn-primary.btn-block
 					i.fa.fa-spinner.fa-pulse.fa-2x
 			.col-md-12.col-sm-12.col-xs-12
 				.text-center.spinner

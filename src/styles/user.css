@@ -24,7 +24,7 @@ input[type="search"],
 input[type="email"],
 input[type="submit"],
 button, select,
-.form-control { outline: none; box-shadow: none; transition: none; height: 60px; font-size: 18px; border-radius: 6px; }
+.form-control { outline: none; box-shadow: none; transition: none; height: 50px; font-size: 18px; border-radius: 6px; }
 input[type="text"] { color: $gray; }
 input[type="search"] { color: $gray; }
 input[type="submit"] { opacity: 0.9; }
@@ -59,7 +59,7 @@ form { padding-bottom: 20px; overflow: hidden; }
 }
 
 .main-search {
-    input { color: $black; font-size: 28px;
+    input { color: $black; font-size: 26px;
         &:disabled { color: $gray; }
     }
 }
@@ -194,6 +194,9 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
                     img { width: 200px; }
                 }
             }
+        }
+        .banner { background: $white;
+            &:before, &:after { background: $white; }
         }
     }
 }
