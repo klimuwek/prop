@@ -59,7 +59,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('images', function() {
-	return gulp.src('src/**/*.{png,jpg,jpeg,ico,gif}', {since: gulp.lastRun('images')})
+	return gulp.src('src/images/**/*.{png,jpg,jpeg,ico,gif,svg}', {base: 'src', since: gulp.lastRun('images')})
 		.pipe($.plumber(function(error) {
                 console.log(error.message);
                 this.emit('end');
@@ -91,7 +91,7 @@ gulp.task('serve', function() {
 gulp.task('watch', function() {
 	gulp.watch('src/styles/**/*.css', gulp.series('styles'));
 	gulp.watch('src/scripts/**/*.js', gulp.series('scripts'));
-	gulp.watch('src/**/*.{png,jpg,jpeg,ico,gif,svg}', gulp.series('images'));
+	gulp.watch('src/images/**/*.{png,jpg,jpeg,ico,gif,svg}', gulp.series('images'));
     gulp.watch('src/html/**/*.pug', gulp.series('html'));
 	gulp.watch('src/for_copy/**/*.*', gulp.series('copy'));
 });

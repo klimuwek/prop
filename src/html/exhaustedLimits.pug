@@ -8,14 +8,13 @@ block metaInfo
 	+pageMetaMxn
 
 block content
-	- var crumbs = true
+	- var crumbs = false
 	.container.head
 		.row
 			include components/_crumbs
 	.container.main
 		.row
 			.col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1.col-xs-12
-				- var form_disabled = true
 				- var form_exhausted = true
 				include components/_mainsearch
 	.wide.blue
@@ -45,4 +44,4 @@ block content
 			.row
 				include components/_signupform
 			.row
-				p.col-md-12.col-sm-12.text-center Использование сервиса, а также email и SMS абсолютно бесплатны. Для защиты от спама требуется подтверждение email и номера мобильного телефона
+				p.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2.text-center Использование сервиса, а также email и SMS абсолютно бесплатны. Для защиты от спама требуется подтверждение email и номера мобильного телефона

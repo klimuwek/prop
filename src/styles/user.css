@@ -42,7 +42,7 @@ form { padding-bottom: 20px; overflow: hidden; }
     &:hover, &:active { color: $white; opacity: 1; }
     &:focus { color: $white; opacity: 1; outline: 0; }
 }
-.btns button { width: 100%; margin-top: 15px; }
+.btns button { margin-top: 15px; }
 .divider { display: inline-block; padding: 0 4px; }
 .spinner { margin: 30px auto; }
 .blue { background: $blue_bg; }
@@ -55,6 +55,12 @@ form { padding-bottom: 20px; overflow: hidden; }
         & + figure:after { content: ""; position: absolute; display: block; background: $white; height: 60%; left: 0; top: 20%; width: 1px; }
         figcaption { min-height: 40px; margin-bottom: 10px; }
         i { margin-bottom: 20px; }
+    }
+}
+
+.main-search {
+    input { color: $black; 
+        &:disabled { color: $gray; }
     }
 }
 
@@ -163,9 +169,6 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
         .heading { margin-top: 10px; }
         .breadcrumb { margin-bottom: 0; }
     }
-    .main-search {
-        [type='text'] { font-size: 28px; color: $black; }
-    }
     .benefits figure + figure:after { display: none; }
     .tile { background: $yellow_table; border-radius: 6px; color: $black; padding: 15px; margin-top: 15px; margin-bottom: 15px;
         div { margin: 0; }
@@ -173,6 +176,9 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
     }
     .col-xs-12 > form > .form-group { padding: 0; }
     .spinner { margin: 20px auto; }
+    .main-search {
+        input { font-size: 28px; }
+    }
     .signUpForm {
         .codeInput { 
             span { width: 74%; padding-right: 4%; float: left; }

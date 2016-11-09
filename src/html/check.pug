@@ -8,7 +8,7 @@ block metaInfo
 	+pageMetaMxn
 
 block content
-	- var crumbs = true
+	- var crumbs = false
 	.container.head
 		.row
 			include components/_crumbs
@@ -16,7 +16,6 @@ block content
 		.row
 			.col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1.col-xs-12
 				- var form_checking = true
-				- var form_enabled = true
 				- var form_spinner = true
 				- var form_register = true
 				include components/_mainsearch
@@ -28,44 +27,45 @@ block content
 				include components/_signupform
 			.row
 				p.col-md-12.col-sm-12.text-center Я уже зарегистрирован - 
-						a(gref="#") Войти
+					a(gref="#") Войти
 	.container
 		.row.text-center
 			.col-md-12.col-sm-12.col-xs-12
 				p Результаты последней проверки от 10.09.2016 14:34
-				table.table.table-bordered.hidden-xs
+				table.table.table-bordered
 					thead
 						tr
 							td Номер
 							td Тип
-							td Дата начала
+							td.hidden-xs Дата начала
 							td Дата окончания
 							td Статус
 					tbody.text-left.blackColor
 						tr.success
-							td Номер
+							td E099EX97
 							td ТТК
-							td 24.11.2023
+							td.hidden-xs 24.11.2023
 							td 05.07.2048
 							td всего 5 дней
 						tr.active
-							td Номер
+							td E099EX97
 							td ТТК
-							td 24.11.2009
+							td.hidden-xs 24.11.2009
 							td 15.07.2013
 							td Осталось 55 дней
 						tr.warning
-							td Номер
+							td E099EX97
 							td ТТК
-							td 24.11.2009
+							td.hidden-xs 24.11.2009
 							td 15.07.2013
 							td Закончен
 						tr.danger
-							td Номер
+							td E099EX97
 							td ТТК
-							td 24.11.2009
+							td.hidden-xs 24.11.2009
 							td 15.07.2013
-							td Анулирован 
-				include components/_tile
-			.form-group.col-md-4.col-md-offset-4.col-sm-4.col-sm-offset-4
-				a(href="#").btn.btn-lg.btn-primary.col-xs-12 Отслеживать пропуск
+							td Анулирован
+			.col-md-4.col-md-offset-2.col-sm-4.col-sm-offset-2.col-xs-12.btns
+				button(type="button").btn.btn-lg.btn-primary.btn-block Отслеживать пропуск
+			.col-md-4.col-sm-4.col-xs-12.btns
+				button(type="button").btn.btn-lg.btn-primary.btn-block Заказать пропуск

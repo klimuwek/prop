@@ -4,10 +4,13 @@ form.main-search
 			.text-center
 				p Проверяем пропуск. Обычно проверка занимает 30 секунд...
 			.form-group.col-md-8.col-sm-7.col-xs-12
-				input(type="text" placeholder="Введите гос. номер автомобиля..." disabled="disabled" value="AA11AAA111").form-control 
+				input(type="text" placeholder="Введите гос. номер автомобиля..." disabled="disabled" value="AA11AAA111").form-control
 			.col-md-4.col-sm-5.col-xs-12
 				button(type="submit" disabled="disabled").btn.btn-lg.btn-primary.btn-block
-					i.fa.fa-times-circle.fa-3x.redColor
+					i.fa.fa-spinner.fa-pulse.fa-2x
+			.col-md-12.col-sm-12.col-xs-12
+				.text-center.spinner
+					i.fa.fa-spinner.fa-pulse.fa-5x
 
 		if form_enabled
 			.form-group.col-md-8.col-sm-7.col-xs-12
@@ -15,15 +18,13 @@ form.main-search
 			.col-md-4.col-sm-5.col-xs-12
 				button(type="submit").btn.btn-lg.btn-primary.btn-block Проверить пропуск
 
-		if form_disabled
+		if form_exhausted
 			.form-group.col-md-8.col-sm-7.col-xs-12
 				input(type="text" placeholder="Введите гос. номер автомобиля..." disabled="disabled").form-control
 			.col-md-4.col-sm-5.col-xs-12
 				button(type="submit" disabled="disabled").btn.btn-lg.btn-primary.btn-block Проверить пропуск
-
-		if form_exhausted
 			.col-md-12.col-sm-12.col-xs-12
-				h3.text-center 
+				h2.text-center 
 					| Вы сделали сегодня более 10 проверок.
 					br 
 					a(href="").blueColor Авторизуйтесь
@@ -31,18 +32,16 @@ form.main-search
 					a(href="").blueColor Зарегистрируйтесь
 					|, чтобы продолжить работу с сервисом
 
-		if form_spinner
-			.col-md-12.col-sm-12.col-xs-12
-				.text-center.spinner
-					i.fa.fa-spinner.fa-5x.redColor
-
 		if form_register
 			.col-md-12.col-sm-12.col-xs-12
-				h3.text-center Хотите проверять в 2 раза быстрее?
+				h2.text-center Хотите проверять в 2 раза быстрее?
 					br 
 					| Зарегистрируйтесь!
 
 		if form_notFound
+			.col-md-12.col-sm-12.col-xs-12
+				.text-center.spinner
+					i.fa.fa-times-circle.fa-5x.redColor
 			.col-md-12.col-sm-12.col-xs-12
 				h3.text-center Пропуск в базе департамента не найден
 				p.small.text-center 
@@ -51,6 +50,6 @@ form.main-search
 
 		if form_buttons
 			.col-md-6.col-sm-6.col-xs-12.btns
-				button(type="button").btn.btn-lg.btn-primary Отслеживать пропуск
+				button(type="button").btn.btn-lg.btn-primary.btn-block Отслеживать пропуск
 			.col-md-6.col-sm-6.col-xs-12.btns
-				button(type="button").btn.btn-lg.btn-primary Заказать пропуск
+				button(type="button").btn.btn-lg.btn-primary.btn-block Заказать пропуск
