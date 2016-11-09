@@ -130,9 +130,6 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
         }
     }
     .banner { background: $light-gray; position: relative; text-align: center; display: block;
-        &:before, &:after { content: ''; display: block; position: absolute; top: 0; width: 50%; height: 100%; background: $light-gray; }
-        &:before { right: 100%; }
-        &:after { left: 100%; }
     }
 }
 
@@ -200,9 +197,7 @@ footer { position: absolute; left: 0; bottom: 0; right: 0; height: 140px; paddin
                 }
             }
         }
-        .banner { background: $white;
-            &:before, &:after { background: $white; }
-        }
+        .banner { background: $white; }
     }
 }
 
