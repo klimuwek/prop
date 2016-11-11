@@ -5,7 +5,7 @@ form.main-search
 				p Проверяем пропуск. Обычно проверка занимает 30 секунд...
 			.form-group.col-md-7.col-sm-7.col-xs-12
 				input(type="text" placeholder="А111АА77").form-control
-				p.small Введите гос. номер автомобиля...
+				.small Введите гос. номер автомобиля...
 			.col-md-5.col-sm-5.col-xs-12
 				button(type="submit" style="padding: 5px;").btn.btn-lg.btn-primary.btn-block
 					i.fa.fa-spinner.fa-pulse.fa-2x
@@ -16,14 +16,14 @@ form.main-search
 		if form_enabled
 			.form-group.col-md-7.col-sm-7.col-xs-12
 				input(type="text" placeholder="А111АА77").form-control
-				p.small Введите гос. номер автомобиля...
+				.small Введите гос. номер автомобиля...
 			.col-md-5.col-sm-5.col-xs-12
 				button(type="submit").btn.btn-lg.btn-primary.btn-block Проверить пропуск
 
 		if form_exhausted
 			.form-group.col-md-7.col-sm-7.col-xs-12
 				input(type="text" placeholder="А111АА77" disabled="disabled").form-control
-				p.small Введите гос. номер автомобиля...
+				.small Введите гос. номер автомобиля...
 			.col-md-5.col-sm-5.col-xs-12
 				button(type="submit" disabled="disabled").btn.btn-lg.btn-primary.btn-block Проверить пропуск
 			.col-md-12.col-sm-12.col-xs-12
